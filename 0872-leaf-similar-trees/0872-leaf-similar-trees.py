@@ -19,8 +19,6 @@ class Solution:
         x=postorder(root1)
         a=[]
         y=postorder(root2)
-        print(x)
-        print(y)
         if(x==y):
             return True
         
