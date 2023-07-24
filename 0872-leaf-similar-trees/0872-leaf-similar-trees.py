@@ -7,17 +7,16 @@
 class Solution:
     def leafSimilar(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> bool:
         def postorder(root):
+            a=[]
             if(root):
                 if(root.left):
-                    postorder(root.left)
+                    a+=postorder(root.left)
                 if(root.right):
-                    postorder(root.right)
+                    a+=postorder(root.right)
                 if(root.left==None and root.right==None):
                     a.append(root.val)
             return a
-        a=[]
         x=postorder(root1)
-        a=[]
         y=postorder(root2)
         if(x==y):
             return True
